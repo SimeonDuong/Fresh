@@ -29,7 +29,16 @@ namespace Fresh
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-
+            if (LoginTextBox.Text.Length > 2)
+            {
+                // TODO: Make call to service to get user id and pass to viewpage in query string
+                this.Frame.Navigate(typeof(ViewPage));
+            }
+            else
+            {
+                LoginTextBox.Text = "";
+                LoginTextBox.WatermarkText = "Name length must be > 2 chars";
+            }
         }
     }
 }
