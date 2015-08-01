@@ -8,6 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0" Name="DecayListView" Height="Auto">
+            <x:String>Placeholder Item 1</x:String>
+            <x:String>Placeholder Item 2</x:String>
+        </ListView>
+        <CommandBar Grid.Row="1">
+            <AppBarButton Icon="Camera" Label="Add a receipt" Click="Camera_Click"/>
+        </CommandBar>
     </Grid>
 </Page>
